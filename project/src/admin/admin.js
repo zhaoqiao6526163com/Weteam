@@ -11,8 +11,8 @@ class Admin extends Component{
         <div className='admin-right'>
           <div className="header">??</div>
           <div className="middle">
+          {this.props.children}
             ??
-            {this.props.children}
           </div>
           <div className="footer">??</div>
         </div>
