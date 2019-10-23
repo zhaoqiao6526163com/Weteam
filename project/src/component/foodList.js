@@ -7,6 +7,7 @@ class FoodList extends Component{
       
     }
   }
+  component
   render(){
     return(
       <div>

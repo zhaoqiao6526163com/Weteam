@@ -2,14 +2,27 @@ import React,{Component} from "react"
 import { Form, Icon, Input, Button, Checkbox,Card,message } from 'antd';
 
 class Login extends Component {
+  constructor(){
+      super()
+      this.state = {
+          us:"",
+          ps:""
+      }
+  }
   submit=()=>{
     // let result = this.props.form.getFieldsValue();
     // console.log(result);
+    let {us,ps} = this.state
     this.props.form.validateFields((err,data)=>{
           if(err){
               message.error("输入有误，请重新输入")
           }else{
-              this.$axios.get('/api/home/login')
+              this.$axios.get('/api/home/login',{
+                  params:{
+                      us,
+                      ps
+                  }
+              })
               .then((data)=>{
                   console.log(data)
 
@@ -42,6 +55,10 @@ class Login extends Component {
         <Input
           prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
           placeholder="账号"
+          value={this.state.us}
+          onChange={(e)=>{
+              this.setState({us:e.target.value})
+          }}
         />,
       )}
     </Form.Item>
@@ -53,6 +70,10 @@ class Login extends Component {
           prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
           type="password"
           placeholder="密码"
+          value={this.state.ps}
+          onChange={(e)=>{
+              this.setState({ps:e.target.value})
+          }}
         />,
     )}
     </Form.Item>

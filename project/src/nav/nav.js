@@ -11,7 +11,7 @@ let newData = [
       {name:"用户列表",path:"/admin/userList"},
       {name:"商家列表",path:"/admin/shopList"},
       {name:"食品列表",path:"/admin/foodList"},
-      {name:"订单列表                                                                                            宝宝宝宝宝宝宝宝宝宝宝宝宝宝宝宝宝宝宝宝                                ",path:"/admin/orderList"},
+      {name:"订单列表",path:"/admin/orderList"},
       {name:"管理员列表",path:"/admin/adminList"}
     ]  
   },
