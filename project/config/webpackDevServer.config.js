@@ -88,6 +88,13 @@ module.exports = function(proxy, allowedHost) {
           pathRewrite:{
             '^/api':''
           }
+      },
+      'upd':{
+        target:"http://10.60.14.91:3000/",
+        changeorigin:true,
+        pathRewrite:{
+          '^/upd':''
+        }
       }
   },
     before(app, server) {
