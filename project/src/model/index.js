@@ -37,25 +37,25 @@ class Model extends Component{
         this.setState({show:this.state.show})
     }
     update=()=>{
-        let file=this.refs.file.files[0]
-        let formdata=new FormData()
-        formdata.append('img',file)
-        // console.log(formdata.get('img').name)
-        let config = {
-            headers:{'Content-Type':'multipart/form-data'}
-        }
+        // let file=this.refs.file.files[0]
+        // let formdata=new FormData()
+        // formdata.append('img',file)
+        // // console.log(formdata.get('img').name)
+        // let config = {
+        //     headers:{'Content-Type':'multipart/form-data'}
+        // }
         // if(this.state.imgPath === ''){
         //     return false
         // }else
         // {
             // 发起请求
             let url = '/api/food/updatefood'
-            this.$axios.get(url,config,{
+            this.$axios.get(url,{
                 params: {
                     _id:this.state._id,
                     foodname :this.state.name,
                     foodprice:this.state.price,
-                    foodimgpath:this.state.imgPath,
+                    // foodimgpath:this.state.imgPath,
                     foodType:this.state.classify,
                     fooddesc:this.state.desc,
                     foodgrade:this.state.score,
