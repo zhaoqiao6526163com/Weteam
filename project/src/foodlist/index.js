@@ -52,9 +52,18 @@ class FoodList extends Component{
     cancelModel=()=>{
         this.setState({changeModel:false})
     }
-    del(index){
-        let list = this.state.data.splice(index,1)
-        this.setState({list})
+    del(id){
+        let url = '/api/food/delfood'
+        this.$axios.get(url,{
+            params:{
+                _id:id
+            }
+        })
+        .then((data)=>{
+            console.log(data)
+            console.log(id)
+            this.refreshData()
+        })
     }
     changeModel=(data)=>{
         // console.log(123)
@@ -121,7 +130,7 @@ class FoodList extends Component{
                                                         okText='OK'
                                                         cancelText='No'
                                                         onConfirm={()=>{
-                                                            this.del(index)
+                                                            this.del(item.foodid)
                                                         }}
                                                     >
                                                         <button className='btn2 btn'>删除</button>
