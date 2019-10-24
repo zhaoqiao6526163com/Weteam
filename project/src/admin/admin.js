@@ -3,6 +3,7 @@ import './admin.less'
 import Nav from '../nav/nav'
 class Admin extends Component{
   render(){
+    console.log(this.props.children)
     return(
       <div className="admin">
         <div className="admin-nav">
