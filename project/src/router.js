@@ -4,7 +4,7 @@ import Admin from './admin/admin'
 import Login from './login/login.js'
 import Manage from "./component/manage"
 import UserList from "./component/userList"
-import ShopList from "./component/userList"
+import ShopList from "./component/shopList"
 import FoodList from "./foodlist"
 import OrderList from "./component/orderList"
 import AddShop from "./component/addShop"
