@@ -43,7 +43,7 @@ class Login extends Component {
     console.log(this)
     let { getFieldDecorator } = this.props.form
     return (
-      <div  className="login-form">
+    <div  className="login-form">
       <Card style={{width:"400px",position:"fixed",top:"200px",left:"600px"}}>
       <Form.Item>
       {getFieldDecorator("us",{
@@ -78,17 +78,17 @@ class Login extends Component {
     )}
     </Form.Item>
     <Form.Item>
-     <Checkbox>Remember me</Checkbox>)
-      <a className="login-form-forgot" href="">
-        Forgot password
-      </a>
+      <Checkbox>Remember me</Checkbox>
+        <a className="login-form-forgot" href="">
+          Forgot password
+        </a>
       <Button type="primary" htmlType="submit" className="login-form-button"  onClick={this.submit}>
         登录
       </Button>
-      Or <a href="">register now!</a>
+        Or <a href="">register now!</a>
     </Form.Item>
         </Card>
-      </div>
+  </div>
       );  
     }
   }
