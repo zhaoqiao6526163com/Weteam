@@ -5,7 +5,7 @@ import Login from './login/login.js'
 import Manage from "./component/manage"
 import UserList from "./component/userList"
 import ShopList from "./component/userList"
-import FoodList from "./component/foodList"
+import FoodList from "./foodlist"
 import OrderList from "./component/orderList"
 import AddShop from "./component/addShop"
 import AddGoods from "./component/addGoods"
