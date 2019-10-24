@@ -11,7 +11,7 @@ class FoodList extends Component{
   render(){
     return(
       <div>
-        <span>我是猪</span>
+        
       </div>
     )
   }

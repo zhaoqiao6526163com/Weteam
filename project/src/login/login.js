@@ -46,7 +46,6 @@ class Login extends Component {
     <div  className="login-form">
       <Card style={{width:"400px",position:"fixed",top:"200px",left:"600px"}}>
       <Form.Item>
-<<<<<<< HEAD
       {getFieldDecorator("us",{
         rules: [{ required: true, message: '请输入你的用户名!' },
                 { min: 6, message: '输入长度6-9位!' },
@@ -77,30 +76,6 @@ class Login extends Component {
           }}
         />,
     )}
-=======
-        {getFieldDecorator("us",{
-          rules: [{ required: true, message: '请输入你的用户名!' },
-                  { min: 6, message: '输入长度6-9位!' },
-                  { max: 12, message: '输入长度6-9位!' }
-        ],
-        })(
-          <Input
-            prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
-            placeholder="账号"
-          />,
-        )}
-      </Form.Item>
-      <Form.Item>
-        {getFieldDecorator("ps",{
-
-        })(
-            <Input
-              prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
-              type="password"
-              placeholder="密码"
-            />,
-        )}
->>>>>>> 92f40b718edcaf4c3d393a7968e2f10d7b7c38a7
     </Form.Item>
     <Form.Item>
       <Checkbox>Remember me</Checkbox>
