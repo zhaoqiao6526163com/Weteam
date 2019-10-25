@@ -88,7 +88,7 @@ class Router extends Component{
                  <Route path='/admin/vueEdit' component={VueEdit}></Route>
                  <Route path='/admin/adminSet' component={AdminSet}></Route>
                  <Route path='/admin/explain' component={Explain}></Route>*/}
-              </Admin>
+               </Admin>
             )
           }}></Route>
           <Route path='/login' component={Login}></Route>
