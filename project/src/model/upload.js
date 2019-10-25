@@ -44,11 +44,20 @@ class FoodImg extends React.Component {
     };
     componentDidUpdate() {
         let url = this.state.imageUrl
-        // this.props.imgUrl = this.state.imageUrl
-        ActionCreator.getPath(url)
-        console.log('更新完成')
+        // if(this.state.loading === false){
+        //     // console.log(this.state.imageUrl)
+        //     let url = '/api/file/img'
+        //     this.$axios.get(url,{
+        //         params:{
+        //             hehe:this.state.imageUrl
+        //         }
+        //     })
+        //         .then((data)=>{
+        //             console.log(data)
+        //         })
+        // }
+
         this.props.changePath(url)
-        // this.props.changePath(url)
     }
 
     render() {

@@ -77,7 +77,7 @@ class Model extends Component{
     }
     changePath=(path)=>{
         this.setState({imgPath:path})
-        console.log(this.state.imgPath)
+        // console.log(this.state.imgPath)
     }
     componentDidMount() {
         this.cacelModel1()
