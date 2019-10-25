@@ -1,4 +1,3 @@
-export default {
-    imgUrl:'',
-    txt:''
+export default{
+    table:false
 }

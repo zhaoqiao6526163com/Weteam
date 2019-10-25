@@ -1,6 +1,7 @@
 import React,{Component} from 'react'
 import {BrowserRouter,Switch,Route,Redirect} from 'react-router-dom'
 import Admin from './admin/admin'
+<<<<<<< HEAD
 import Login from './login/login'
 import Manage from "./component/manage"
 import UserList from "./component/userList"
@@ -50,47 +51,21 @@ let obj = [
     address:"/admin/explain"
   },
 ]
+=======
+import Login from './login/login.js'
+>>>>>>> 4cd706843f3c8ad7f2a62e263052eaff4f32a40e
 class Router extends Component{
-  // renderList(obj){
-  //     obj.map((item,index)=>{
-  //         return <Route path={item.address} component={item.component}
-  //         ></Route>
-  //     })
-  // }
   render(){
-
     return(
       <BrowserRouter>
         <Switch>
-        <Redirect exact from='/admin' to ='/admin/home'></Redirect>
           <Route path='/admin' render={()=>{
             return(
               <Admin>
-                  {/*{this.renderList.bind(this,obj)}*/}
-                  {
-                  obj.map((item,index)=>(
-                      
-                      <Route path={item.address} render={()=>(
-                        
-                        <item.component></item.component>
-                       ) }></Route>
-                      )
-                    )     
-                }
-
-
-                 {/*<Route path='/admin/manage' component={Manage}></Route>
-                  <Route path='/admin/userList' component={UserList}></Route>
-                 <Route path='/admin/shopList' component={ShopList}></Route>
-                 <Route path='/admin/foodList' component={FoodList}></Route>
-                 <Route path='/admin/orderList' component={OrderList}></Route>
-                 <Route path='/admin/addShop' component={AddShop}></Route>
-                 <Route path='/admin/addGoods' component={AddGoods}></Route>
-                 <Route path='/admin/visitor' component={Visitor}></Route>
-                 <Route path='/admin/vueEdit' component={VueEdit}></Route>
-                 <Route path='/admin/adminSet' component={AdminSet}></Route>
-                 <Route path='/admin/explain' component={Explain}></Route>*/}
-               </Admin>
+                <Redirect exact from='/admin' to ='/admin/home'></Redirect>
+               
+                
+              </Admin>
             )
           }}></Route>
           <Route path='/login' component={Login}></Route>
