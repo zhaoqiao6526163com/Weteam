@@ -1,5 +1,5 @@
 import React,{Component} from 'react'
-import '../style/home.less'
+import './home.less'
 import ReactEcharts from 'echarts-for-react';
 
 class Manage extends Component{

@@ -6,6 +6,7 @@ import Manage from "./component/manage"
 import UserList from "./component/userList"
 import ShopList from "./component/shopList"
 import FoodList from "./component/foodList"
+
 import OrderList from "./component/orderList"
 import AddShop from "./component/addShop"
 import AddGoods from "./component/addGoods"
@@ -13,6 +14,7 @@ import Visitor from "./component/visitor"
 import VueEdit from "./component/vueEdit"
 import AdminSet from "./component/adminSet"
 import Explain from "./component/explain"
+console.log(FoodList)
 let obj = [
       {component:Manage,
     address:"/admin/manage"

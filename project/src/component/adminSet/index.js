@@ -2,7 +2,7 @@
 import React,{Component} from 'react'
 import { Upload, Icon, message } from 'antd';
 
-import "../style/addminSet.less"
+import "./addminSet.less"
 
 
 class AdminSet extends Component{

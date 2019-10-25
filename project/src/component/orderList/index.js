@@ -1,6 +1,6 @@
 import React,{Component} from 'react'
 import {Card, Table, spin, Pagination} from 'antd';
-import '../style/orderlist.less'
+import './orderlist.less'
 const columns = [
   { title: '订单ID', dataIndex: 'name', key: 'name' },
   { title: '总价格', dataIndex: 'desc', key: 'desc' },

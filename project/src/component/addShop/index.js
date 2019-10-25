@@ -1,6 +1,6 @@
 import React,{Component} from 'react'
 import { Form, Input, Button, TimePicker, Select, Cascader, InputNumber,checkOut,message,Card } from 'antd';
-import "../style/addShop.less"
+import "./addShop.less"
 class AddShop extends Component{
     constructor(){
       super()

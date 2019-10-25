@@ -11,6 +11,8 @@ export default {
         let action={
             type:'TXT',
             params:params
+            
         }
+        return action;
     }
 }

@@ -6,6 +6,7 @@ import * as serviceWorker from './serviceWorker';
 import axios from "./utils/axios"
 import {Provider} from 'react-redux'
 import Store from './store/store'
+import 'antd/dist/antd.css';
 Component.prototype.$axios=axios
 ReactDOM.render(
     <Provider store={Store}>

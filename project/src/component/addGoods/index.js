@@ -1,6 +1,6 @@
 import React,{Component} from 'react'
 import { Input,Upload, Icon, message,Radio,Button } from 'antd';
-import "../style/addGoods.less"
+import "./addGoods.less"
 function getBase64(img, callback) {
   const reader = new FileReader();
   reader.addEventListener('load', () => callback(reader.result));
