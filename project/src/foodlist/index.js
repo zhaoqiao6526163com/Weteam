@@ -1,6 +1,6 @@
 import React,{Component} from 'react'
 import {Card,Icon,Popconfirm,Pagination } from 'antd'
-import './index.less'
+import '../style/index.less'
 import Model from '../model'
 // import ActionCreator from '../store/actionCreator'
 

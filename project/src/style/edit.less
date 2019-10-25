@@ -1,0 +1,109 @@
+.edit-box{
+  .edit-container{
+    width: 100%;
+    padding: 40px;
+    margin-bottom: 40px;
+    .editor{
+      height: 350px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      .edit-tools{
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        text-align: left;
+        float: left;
+        .edit-formats{
+          display: inline-block;
+          margin-right: 15px;
+          margin-bottom: 10px;
+          .anticon{
+            padding: 3px 5px;
+            font-size: 18px;
+            font-weight: bold;
+          }
+          .anticon1{
+            font-weight: bolder;
+            font-size: 30px;
+          }
+          select{
+            border: none;
+            outline: none;
+            .select-small,.select-heading4{
+              font-size: 14px;
+            }
+            .select-normal,.select-heading3{
+              font-size: 16px;
+            }
+            .select-large,.select-heading2{
+              font-size: 18px;
+            }
+            .select-huge,.select-heading1{
+              font-size: 20px;
+              font-weight: bold;
+            }
+            .select-heading2{
+              font-weight: 700;
+            }
+            .select-heading3{
+              font-weight: 500;
+            }
+            .select-heading4{
+              font-weight: 300;
+            }
+            .select-heading5{
+             font-size: 13px;
+              font-weight: 200;
+            }
+            .select-heading6{
+              font-size: 12px;
+              font-weight: 100;
+            }
+            .select-sans{
+              font-family: "Baskerville Old Face";
+            }
+            .select-serief{
+              font-family: Algerian;
+            }
+            .select-monospance{
+              font-family: BlinkMacSystemFont;
+            }
+          }
+          .anticon:hover{
+            color: #06c;
+          }
+        }
+        sup,sub{
+          font-size: 12px;
+        }
+      }
+      .edit-text{
+        border: 1px solid #ccc;
+        border-top: none;
+        padding: 12px 15px;
+        flex: 1;
+        overflow-y: auto;
+        line-height: 1.42;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        resize: none;
+        outline: none;
+      }
+    }
+  }
+  .submit-btn{
+    text-align: center;
+    .btn{
+      background-color: #20a0ff;
+      border:1px solid #20a0ff;
+      color: #fff;
+      outline: none;
+      padding: 10px 15px;
+      border-radius: 4px;
+      line-height: 1em;
+    }
+  }
+}

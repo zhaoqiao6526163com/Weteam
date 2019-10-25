@@ -20,7 +20,8 @@ class Model extends Component{
             _id:this.props.update.foodid,
             addGui:false,
             show:false,
-            list:[]
+            list:[],
+            nowpage:this.props.nowpage
         }
     }
     addGui=()=>{
@@ -66,7 +67,7 @@ class Model extends Component{
             .then((data)=>{
                 console.log(data)
                 console.log(this.state.imgPath)
-                this.props.refresh()
+                this.props.refresh(this.state.nowpage,10)
             })
         // }
         // console.log(this.state.name,this.state.desc,this.state.classify)

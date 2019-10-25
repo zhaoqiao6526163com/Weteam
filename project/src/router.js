@@ -68,7 +68,7 @@ class Router extends Component{
                   {
                   obj.map((item,index)=>(
                       
-                      <Route path={item.address} render={()=>(
+                      <Route key={index} path={item.address} render={()=>(
                         
                         <item.component></item.component>
                        ) }></Route>

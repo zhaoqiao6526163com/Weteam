@@ -5,6 +5,7 @@ import { Menu,Icon } from 'antd';
 import "./index.less"
 import { bindActionCreators } from 'redux'
 import actionCreator from '../store/actionCreator'
+import BScroll from "better-scroll";
 const { SubMenu } = Menu
 
 let newData = [
@@ -59,7 +60,15 @@ class Nav extends Component{
 
         }
       }
-      rootSubmenuKeys = ['sub1', 'sub2', 'sub4'];
+      componentDidMount() {
+          let wrapper = this.refs.wrapper
+          const scroll = new BScroll(wrapper, {
+              scrollY: true,  //开启横向滚动
+              click: true,  // better-scroll 默认会阻止浏览器的原生 click 事件
+          })
+      }
+
+    rootSubmenuKeys = ['sub1', 'sub2', 'sub4'];
       onOpenChange = openKeys => {
         let latestOpenKey = openKeys.find(key => this.state.openKeys.indexOf(key) === -1);
         if (this.rootSubmenuKeys.indexOf(latestOpenKey) === -1) {
@@ -89,7 +98,7 @@ class Nav extends Component{
                                 {this.renderList(item.children)}
                           </SubMenu>
                 }else{
-                    return <Menu.Item onClick={this.jump.bind(this,item.path)}>
+                    return <Menu.Item  onClick={this.jump.bind(this,item.path)}>
                         <div className='cell'>
                             <Icon type={item.type} />
                             {item.name}
@@ -100,13 +109,13 @@ class Nav extends Component{
       }
   render(){
       return(
-        <div className="nav-list">
-        <Menu
-          mode="inline"
-          style={{ width: 200 }}
-        >
-          {this.renderList(newData)}
-        </Menu>
+        <div className="nav-list" ref='wrapper'>
+            <Menu
+              mode="inline"
+              style={{ width: 200 }}
+            >
+              {this.renderList(newData)}
+            </Menu>
         </div>
       );
       

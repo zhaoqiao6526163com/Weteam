@@ -1,33 +1,36 @@
-.cell {
+.ant-pagination{
   text-align: left;
-  overflow: hidden;
+}
+.el {
+  display: flex;
+  flex-shrink: 0;
+  flex-wrap: wrap;
 
-  .btn {
-    background-color: transparent;
-    border: 1px solid #c4c4c4;
-    outline: none;
-    color: #1f2d3d;
-    padding: 7px 9px;
-    font-size: 12px;
-    border-radius: 4px;
-    line-height: 1em;
-    //float: left;
-  }
+  .el-item {
+    width: 50%;
+    text-align: left;
 
-  .btn1 {
-    background-color: #fff;
-  }
+    span {
+      font-size: 14px;
+      display: inline-block;
+      line-height: 1em;
+    }
 
-  .btn2 {
-    background-color: #ff4949;
-    border-color: #ff4949;
-    color: #fff;
-    margin-left: 10px;
+    .title {
+      width: 70px;
+      color: #99a9bf;
+      padding: 11px 12px 11px 0;
+    }
+
+    .content {
+      line-height: 36px;
+    }
   }
 }
-
-.ant-table-expanded-row{
-  td:nth-of-type(2){
-    padding: 20px 50px 20px 0;
-  }
+.ant-table-wrapper{
+  border: 1px solid #dfe6ec;
+  border-radius: 4px;
+}
+td,th{
+  text-align: left!important;
 }
