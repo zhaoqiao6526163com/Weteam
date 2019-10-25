@@ -167,7 +167,7 @@ class FoodList extends Component{
                                                         <span className='content'>{item.desc}</span>
                                                     </div>
                                                     <div className='el-item'>
-                                                        <span className='title'>餐馆地址</span>
+                                                        <span className='title'>餐馆地址...</span>
                                                         <span className='content'>{item.address}</span>
                                                     </div>
                                                     <div className='el-item'>
