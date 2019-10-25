@@ -14,7 +14,6 @@ class Admin extends Component{
           {this.props.children}
             ??
           </div>
-          <div className="footer">??</div>
         </div>
       </div>
     )

@@ -1,42 +1,48 @@
 import React,{Component} from 'react'
 import {withRouter} from "react-router-dom"
-import { Menu } from 'antd';
+import { Menu,Icon } from 'antd';
 import "./index.less"
 const { SubMenu } = Menu;
 
 let newData = [
-  {name:"首页",path:"/admin/manage"},
+  {name:"首页",path:"/admin/manage",type:'appstore'},
   {name:"数据管理",
+      type:'file',
     children:[
       {name:"用户列表",path:"/admin/userList"},
       {name:"商家列表",path:"/admin/shopList"},
       {name:"食品列表",path:"/admin/foodList"},
-      {name:"订单列表                                                                                            宝宝宝宝宝宝宝宝宝宝宝宝宝宝宝宝宝宝宝宝                                ",path:"/admin/orderList"},
+      {name:"订单列表",path:"/admin/orderList"},
       {name:"管理员列表",path:"/admin/adminList"}
     ]  
   },
   {name:"添加数据",
+      type:'plus',
     children:[
       {name:"添加商铺",path:"/admin/addShop"},
       {name:"添加商品",path:"/admin/addGoods"}
     ]
   },
   {name:"图表",
+      type:'star',
     children:[
       {name:"用户分布",path:"/admin/visitor"}
     ]
   },
   {name:"编辑",
+      type:'edit',
    children:[
     {name:"文本编辑",path:"/admin/vueEdit"}
   ]
 },
   {name:"设置",
+      type:'setting',
   children:[
     {name:"管理员设置",path:"/admin/adminSet"}
   ]
 },
   {name:"说明",
+      type:'exclamation-circle',
   children:[
     {name:"说明",path:"/admin/explain"}
   ]
@@ -47,9 +53,9 @@ class Nav extends Component{
         super()
         this.state={
           openKeys: ['sub1'],
+
         }
       }
-
       rootSubmenuKeys = ['sub1', 'sub2', 'sub4'];
       onOpenChange = openKeys => {
         let latestOpenKey = openKeys.find(key => this.state.openKeys.indexOf(key) === -1);
@@ -61,7 +67,6 @@ class Nav extends Component{
           });
         }
       };
-
       jump(path){
         this.props.history.push(path);
       }
@@ -69,11 +74,21 @@ class Nav extends Component{
       renderList=(data)=>{
           return data.map((item,index)=>{
                 if( item.children ){
-                    return <SubMenu title={item.name}>
-                              {this.renderList(item.children)}
+                    return <SubMenu title={
+                        <span>
+                            <Icon type={item.type} />
+                            <span>{item.name}</span>
+                        </span>
+                    }>
+                                {this.renderList(item.children)}
                           </SubMenu>
                 }else{
-                    return <Menu.Item onClick={this.jump.bind(this,item.path)}>{item.name}</Menu.Item>
+                    return <Menu.Item onClick={this.jump.bind(this,item.path)}>
+                        <div className='cell'>
+                            <Icon type={item.type} />
+                            {item.name}
+                        </div>
+                    </Menu.Item>
                 }
           })
       }
@@ -82,16 +97,9 @@ class Nav extends Component{
         <div className="nav-list">
         <Menu
           mode="inline"
-          style={{ width: 256 }}
+          style={{ width: 200 }}
         >
           {this.renderList(newData)}
-      {/*  <Menu.Item>首页</Menu.Item>
-          <SubMenu
-            title={ 123 }
-          >
-            <Menu.Item key="1">Option 1</Menu.Item>
-            
-      </SubMenu> */}
         </Menu>
         </div>
       );
