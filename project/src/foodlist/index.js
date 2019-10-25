@@ -13,20 +13,25 @@ class FoodList extends Component{
             data:[
                 {show:false,name:"ascdss",desc:"sdvajd",score:4.7,resname:" ",foodid:3970,resid:7,address:' ',classify:' ',amount:731}
             ],
-            updateData:null
+            updateData:null,
+            nowPage:1,
+            pageSize:10,
+            count:''
         }
     }
     componentDidMount() {
-        this.refreshData()
+        let page = this.state.nowPage
+        let pagesize = this.state.pageSize
+        this.refreshData(page,pagesize)
         this.cancelModel()
     }
 
-    refreshData=()=>{
+    refreshData=(page,pageSize)=>{
         this.setState({changeModel:false})
-        let url = '/api/food/getfoodlist'
+        let url = `/api/food/getfoodbypage?page=${page}&pagesize=${pageSize}`
         this.$axios.get(url)
         .then((data)=>{
-            console.log(data.data.list)
+            console.log(data)
             let list = data.data.list.map((item,index)=>{
                 let obj = {
                     show:false,
@@ -46,7 +51,7 @@ class FoodList extends Component{
                 }
                 return obj
             })
-            this.setState({data:list})
+            this.setState({data:list,count:data.data.count})
         })
     }
     cancelModel=()=>{
@@ -62,7 +67,7 @@ class FoodList extends Component{
         .then((data)=>{
             console.log(data)
             console.log(id)
-            this.refreshData()
+            this.refreshData(this.state.nowPage)
         })
     }
     changeModel=(data)=>{
@@ -75,7 +80,7 @@ class FoodList extends Component{
         this.setState({show:this.state.data[index].show})
     }
     render(){
-        let {updateData,data} = this.state
+        let {updateData,data,count,pageSize} = this.state
         return(
             <div className='tabel-container'>
                 {this.state.changeModel?<Model update={updateData} refresh={this.refreshData} cancel={this.cancelModel}></Model>:''}
@@ -187,8 +192,11 @@ class FoodList extends Component{
                     }
                 </div>
                 <div className='pagination'>
-                    <span>共{data.length}条</span>
-                    <Pagination defaultCurrent={1} total={data.length} pageSize={10} />
+                    <span>共{count}条</span>
+                    <Pagination defaultCurrent={1} total={count} pageSize={pageSize} onChange={(page,pageSize)=>{
+                        this.refreshData(page,pageSize)
+                        console.log(page,pageSize)
+                    }} />
                 </div>
             </div>
         )

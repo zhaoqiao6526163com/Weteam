@@ -6,5 +6,11 @@ export default {
         }
         // console.log(action.params,'action')
         return action
+    },
+    getTxt(params){
+        let action={
+            type:'TXT',
+            params:params
+        }
     }
 }
