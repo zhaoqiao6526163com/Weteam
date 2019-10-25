@@ -63,11 +63,8 @@ refreshdata(page,pageSize){
        <Card style={{height:'900px'}}>
         <Table dataSource={this.state.dataSource} columns={this.state.columns} pagination={false}
            style={{marginBottom:'20px',border:'1px solid #ccc'}}
-           
         />
         <Pagination defaultCurrent={1} 
-         style={{position:'fixed',bottom:'30px',}}
-
         total={this.state.count} pageSize={10} onChange={(page,pageSize)=>{
           // console.log(page,pageSize)
           this.setState({dataSource:[]})

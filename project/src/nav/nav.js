@@ -1,12 +1,15 @@
 import React,{Component} from 'react'
 import {withRouter} from "react-router-dom"
-import { Menu } from 'antd';
+import { Menu} from 'antd'
+import {connect} from 'react-redux'
 import "./index.less"
-const { SubMenu } = Menu;
+import { bindActionCreators } from 'redux'
+import actionCreator from '../store/actionCreator'
+const { SubMenu } = Menu
 
 let newData = [
-  {name:"首页",path:"/admin/manage"},
-  {name:"数据管理",
+  {name:"首页",path:"/admin/manage",type:'appstore'},
+  {name:"数据管理",type:'copy',
     children:[
       {name:"用户列表",path:"/admin/userList"},
       {name:"商家列表",path:"/admin/shopList"},
@@ -15,13 +18,13 @@ let newData = [
       {name:"管理员列表",path:"/admin/adminList"}
     ]  
   },
-  {name:"添加数据",
+  {name:"添加数据",type:'plus',
     children:[
       {name:"添加商铺",path:"/admin/addShop"},
       {name:"添加商品",path:"/admin/addGoods"}
     ]
   },
-  {name:"图表",
+  {name:"图表",type:'copy',
     children:[
       {name:"用户分布",path:"/admin/visitor"}
     ]
@@ -62,18 +65,27 @@ class Nav extends Component{
         }
       };
 
-      jump(path){
-        this.props.history.push(path);
+      jump=(path)=>{
+        this.props.history.push(path)
+        console.log(this)
+        console.log(this.refs.qs)
+        
       }
 
       renderList=(data)=>{
           return data.map((item,index)=>{
                 if( item.children ){
-                    return <SubMenu title={item.name}>
+                    return <SubMenu title={
+                      item.name
+                      
+                    }>
+                    
+                        
                               {this.renderList(item.children)}
-                          </SubMenu>
+                  
+                      </SubMenu>
                 }else{
-                    return <Menu.Item onClick={this.jump.bind(this,item.path)}>{item.name}</Menu.Item>
+                    return <Menu.Item onClick={this.jump.bind(this,item.path)} ref='qs'>{item.name}</Menu.Item>
                 }
           })
       }
@@ -99,4 +111,6 @@ class Nav extends Component{
   }
 }
 
-export default withRouter(Nav)
+export default connect(state=>state,(dispatch)=>{
+  return bindActionCreators(actionCreator,dispatch)
+})(withRouter(Nav))
