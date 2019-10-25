@@ -1,6 +1,11 @@
 import React,{Component} from 'react'
+<<<<<<< HEAD:project/src/component/orderList.js
 import {Card, Table, spin, Pagination, Icon} from 'antd';
 import '../style/orderlist.less'
+=======
+import {Card, Table, spin, Pagination} from 'antd';
+import './orderlist.less'
+>>>>>>> a16c2ae43837b7df1b47919d0f9788c1dee4ca64:project/src/component/orderList/index.js
 const columns = [
   { title: '订单ID', dataIndex: 'name', key: 'name' },
   { title: '总价格', dataIndex: 'desc', key: 'desc' },

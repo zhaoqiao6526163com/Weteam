@@ -1,11 +1,13 @@
 import React,{Component} from 'react'
 import {BrowserRouter,Switch,Route,Redirect} from 'react-router-dom'
 import Admin from './admin/admin'
+<<<<<<< HEAD
 import Login from './login/login'
 import Manage from "./component/manage"
 import UserList from "./component/userList"
 import ShopList from "./component/shopList"
 import FoodList from "./component/foodList"
+
 import OrderList from "./component/orderList"
 import AddShop from "./component/addShop"
 import AddGoods from "./component/addGoods"
@@ -13,6 +15,7 @@ import Visitor from "./component/visitor"
 import VueEdit from "./component/vueEdit"
 import AdminSet from "./component/adminSet"
 import Explain from "./component/explain"
+console.log(FoodList)
 let obj = [
       {component:Manage,
     address:"/admin/manage"
@@ -48,22 +51,18 @@ let obj = [
     address:"/admin/explain"
   },
 ]
+=======
+import Login from './login/login.js'
+>>>>>>> 4cd706843f3c8ad7f2a62e263052eaff4f32a40e
 class Router extends Component{
-  // renderList(obj){
-  //     obj.map((item,index)=>{
-  //         return <Route path={item.address} component={item.component}
-  //         ></Route>
-  //     })
-  // }
   render(){
-
     return(
       <BrowserRouter>
         <Switch>
-        <Redirect exact from='/admin' to ='/admin/home'></Redirect>
           <Route path='/admin' render={()=>{
             return(
               <Admin>
+<<<<<<< HEAD
                   {/*{this.renderList.bind(this,obj)}*/}
                   {
                   obj.map((item,index)=>(
@@ -88,6 +87,11 @@ class Router extends Component{
                  <Route path='/admin/vueEdit' component={VueEdit}></Route>
                  <Route path='/admin/adminSet' component={AdminSet}></Route>
                  <Route path='/admin/explain' component={Explain}></Route>*/}
+=======
+                <Redirect exact from='/admin' to ='/admin/home'></Redirect>
+               
+                
+>>>>>>> a16c2ae43837b7df1b47919d0f9788c1dee4ca64
               </Admin>
             )
           }}></Route>

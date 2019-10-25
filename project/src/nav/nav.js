@@ -1,4 +1,5 @@
 import React,{Component} from 'react'
+<<<<<<< HEAD
 import {withRouter} from "react-router-dom"
 import {connect} from 'react-redux'
 import { Menu,Icon } from 'antd';
@@ -118,10 +119,21 @@ class Nav extends Component{
             </Menu>
         </div>
       );
+=======
+class Nav extends Component{
+  constructor(){
+    super()
+    this.state={
+>>>>>>> a16c2ae43837b7df1b47919d0f9788c1dee4ca64
       
+    }
+  }
+  render(){
+    return(
+      <div>
+        我是导航
+      </div>
+    )
   }
 }
-
-export default connect(state=>state,(dispatch)=>{
-  return bindActionCreators(actionCreator,dispatch)
-})(withRouter(Nav))
+export default Nav

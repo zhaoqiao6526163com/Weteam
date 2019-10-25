@@ -1,6 +1,7 @@
 import React,{Component} from 'react'
 import './admin.less'
 import Nav from '../nav/nav'
+<<<<<<< HEAD
 import { Avatar } from 'antd'
 import BScroll from 'better-scroll'
 class Admin extends Component{
@@ -14,11 +15,19 @@ class Admin extends Component{
 
     render(){
     console.log(this.props.children)
+=======
+// import TableModal from '../modal'
+// import Shi from './shi'
+import Shishi from './shishi'
+class Admin extends Component{
+  render(){
+>>>>>>> a16c2ae43837b7df1b47919d0f9788c1dee4ca64
     return(
       <div className="admin">
         <div className="admin-nav">
           <Nav/>
         </div>
+<<<<<<< HEAD
         <div className='wrapper' ref='wrapper'>
             <div className='admin-right'>
                 <div className="header">
@@ -30,9 +39,54 @@ class Admin extends Component{
                     {this.props.children}
                 </div>
             </div>
+=======
+        <div className='admin-right'>
+          <div className="header">??</div>
+          <div className="middle">
+        
+
+       
+      
+        <tr className="el-table__row">
+        
+        <td  className="el-table_1">
+        <div className="cel"></div>
+        </td>
+       
+
+       
+        <td  className="el-table_1">
+        <div className="cel"></div>
+        </td>
+     
+
+      
+        <td  className="el-table_1">
+        <div className="cel"></div>
+        </td>
+     
+
+    
+        <td  className="el-table_1">
+        <div className="cel"></div>
+        </td>
+     
+
+      
+        <td  className="el-table_1">
+        <div className="cel">
+       
+        </div>
+        </td>
+        </tr>
+      
+<Shishi/>
+            {this.props.children}
+          </div>
+          <div className="footer"></div>
+>>>>>>> a16c2ae43837b7df1b47919d0f9788c1dee4ca64
         </div>
       </div>
-      
     )
   }
 }

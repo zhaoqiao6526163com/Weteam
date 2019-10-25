@@ -1,6 +1,6 @@
 import React,{Component} from 'react'
 import { Input,Upload, Icon, message,Radio,Button } from 'antd';
-import "../style/addGoods.less"
+import "./addGoods.less"
 function getBase64(img, callback) {
   const reader = new FileReader();
   reader.addEventListener('load', () => callback(reader.result));
@@ -73,7 +73,7 @@ class AddGoods extends Component{
         this.setState({
           imageUrl,
           loading: false,
-        }),
+        })
       );
     }
   };
@@ -93,7 +93,7 @@ class AddGoods extends Component{
     const { imageUrl } = this.state;
     return(
       <div>
-        <div className="box">
+        <div className="foodType">
             <span>食品种类</span><Input className="ip" value={this.state.foodType} onChange={(e)=>{
                     this.setState({foodType:e.target.value})
             }} /><br/>
@@ -123,6 +123,15 @@ class AddGoods extends Component{
                   {imageUrl ? <img src={imageUrl} alt="avatar" style={{ width: '100%'}} /> : uploadButton}
               </Upload>
             </div>
+
+            <div className="trait">
+                <span>食品特点</span>
+                <select>
+                  <option value="1">新品</option>
+                  <option value="2">招牌</option>
+                </select>
+            </div>
+
 
           <div className="specification">
             <span>食品规格</span>
