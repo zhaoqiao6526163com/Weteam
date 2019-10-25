@@ -1,16 +1,9 @@
-export default {
-    getPath(path){
-        let action = {
-            type:'GET_IMGPATH',
-            params:path
-        }
-        // console.log(action.params,'action')
-        return action
-    },
-    getTxt(params){
+export default{
+    changeTable(params){
         let action={
-            type:'TXT',
+            type:'CHANGE_TABLE',
             params:params
         }
+        return action
     }
 }
