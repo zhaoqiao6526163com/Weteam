@@ -1,19 +1,19 @@
 import React,{Component} from 'react'
 
-class AdminList extends Component{
+class FoodList extends Component{
   constructor(){
     super()
     this.state={
       
     }
   }
+  component
   render(){
     return(
       <div>
-      
-      管理员列表
+        
       </div>
     )
   }
 }
-export default AdminList
+export default FoodList
