@@ -1,14 +1,13 @@
 import React,{Component} from 'react'
 import './admin.less'
 import Nav from '../nav/nav'
-import TableModal from '../modal'
+// import TableModal from '../modal'
 // import Shi from './shi'
 import Shishi from './shishi'
 class Admin extends Component{
   render(){
     return(
       <div className="admin">
-        <TableModal></TableModal>
         <div className="admin-nav">
           <Nav/>
         </div>

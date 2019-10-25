@@ -1,9 +1,10 @@
 import React, { Component, Fragment } from 'react'
 import { Card } from 'antd'
-import { Button,Icon,Popconfirm } from 'antd';
-// import {connect} from 'react-redux'
+import { Button } from 'antd';
+import {connect} from 'react-redux'
+import {Icon,Popconfirm} from 'antd'
 import './index.less'
-class Modal extends Component {
+class Table extends Component {
     render() {
         console.log(this,'modal')
         let {table}=this.props
@@ -16,7 +17,6 @@ class Modal extends Component {
           <span>修改店铺信息</span>
 
             <span className='el-dialog__headerbtn'  ref='close' onClick={()=>{
-                console.log(this)
                 this.props.cancel()
             }}>
             <Icon type="close"/>
@@ -56,9 +56,9 @@ class Modal extends Component {
               </div>
             </div>
             </div>
-       
+        
             </Fragment>
         )
     }
 }
-export default Modal
+export default connect(state=>state)(Table)

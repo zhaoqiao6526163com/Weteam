@@ -9,7 +9,7 @@ const text = <td className="el-table__expanded-cell">
   <form className="el-form demo-table-expand el-form--label-left el-form--inline">
     <div className="el-form-item">
 
-      <label class="el-form-item__label">店铺名称</label>
+      <label class="el-form-item__label">2店铺名称</label>
 
       <span>效果演示</span>
 
