@@ -22,6 +22,7 @@ class AdminSet extends Component{
     const { imageUrl } = this.state;
     return(
       <div>
+            <p className="set-p">管理员信息</p>
             <div className="box">
                 <ul>
                     <li>姓名：</li>

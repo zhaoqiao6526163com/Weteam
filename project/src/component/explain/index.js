@@ -10,7 +10,7 @@ class Explain extends Component{
   render(){
     return(
       <div>
-         <div style={{width:"500px",height:"500px",marginLeft:"300px",fontSize:"14px",font:"500 15px Microsoft YaHei"}}>
+         <div style={{width:"500px",height:"500px",margin:"40px 0 0 300px",fontSize:"14px",font:"500 15px Microsoft YaHei"}}>
               <p>node-elm后台管理系统</p>
 
               <p> 第一次登录的用户自动注册成为普通管理员</p>

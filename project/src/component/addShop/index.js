@@ -1,6 +1,7 @@
 import React,{Component} from 'react'
-import { Form, Input, Button, TimePicker, Select, Cascader, InputNumber,checkOut,message,Card } from 'antd';
+import { Form, Input, Button,TimePicker, Switch } from 'antd';
 import "./addShop.less"
+import moment from 'moment';
 class AddShop extends Component{
     constructor(){
       super()
@@ -90,6 +91,23 @@ class AddShop extends Component{
                                         this.setState({shopdesc:e.target.value})
               } }/><br/>
          
+              <div className="takeOut">
+                    <span>店铺特点</span>
+                    <div className="takeOut-b">
+                        <b>品牌保证</b><Switch defaultChecked className="toggle toggle-l" />
+                        <b>蜂鸟专送</b><Switch defaultChecked className="toggle toggle-l" />
+                        <b>新开店铺</b><Switch defaultChecked  className="toggle-l"/><br/>
+                        <b>外卖保</b><Switch defaultChecked className="toggle" />
+                        <b>准时达</b><Switch defaultChecked className="toggle" />
+                        <b>开发票</b><Switch defaultChecked />             
+                    </div> 
+              </div>
+
+              <div className="start-time">
+                    <label>营业时间</label> <TimePicker  defaultOpenValue={moment('00:00:00', 'HH:mm:ss')} />
+              </div>
+
+
            <select value={this.state.discount} onChange={(e)=>{
              this.setState({discount:e.target.value})
            }}>
