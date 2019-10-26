@@ -37,14 +37,21 @@ class Model extends Component{
         this.state.show = !this.state.show
         this.setState({show:this.state.show})
     }
+    // changeImg=()=>{
+    //     let file=this.refs.file.files[0]
+    //     let formdata=new FormData()
+    //     formdata.append('hehe',file)
+    //     let url = '/api/file/img'
+    //     this.$axios.post(url,{hehe:formdata})
+    //     // console.log(formdata.get('img').name)
+    //     let config = {
+    //         headers:{'Content-Type':'multipart/form-data'}
+    //     }
+    //         .then((data)=>{
+    //             console.log(data)
+    //         })
+    // }
     update=()=>{
-        // let file=this.refs.file.files[0]
-        // let formdata=new FormData()
-        // formdata.append('img',file)
-        // // console.log(formdata.get('img').name)
-        // let config = {
-        //     headers:{'Content-Type':'multipart/form-data'}
-        // }
         // if(this.state.imgPath === ''){
         //     return false
         // }else
@@ -143,7 +150,7 @@ class Model extends Component{
                                 <div className='el-form-item'>
                                     <label>食品图片</label>
                                     <div className='inp'>
-                                        {/*<input type="file" ref='file'/>*/}
+                                        {/*<input type="file" ref='file' onChange={this.changeImg}/>*/}
                                         <FoodImg imgPath={imgPath} changePath={this.changePath}></FoodImg>
                                     </div>
                                 </div>

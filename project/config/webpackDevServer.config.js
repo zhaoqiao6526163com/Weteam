@@ -92,9 +92,9 @@ module.exports = function(proxy, allowedHost) {
       'upd':{
         target:"http://10.60.14.91:3000/",
         changeorigin:true,
-        pathRewrite:{
-          '^/upd':''
-        }
+        // pathRewrite:{
+        //   '^/upd':''
+        // }
       }
   },
     before(app, server) {

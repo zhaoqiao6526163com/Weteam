@@ -11,8 +11,9 @@ import AddShop from "./component/addShop"
 import AddGoods from "./component/addGoods"
 import Visitor from "./component/visitor"
 import VueEdit from "./component/vueEdit"
-import AdminSet from "./component/adminSet"
+import AdminSet from "./component/adminSet/adminSet"
 import Explain from "./component/explain"
+import AdminList from './component/adminList/index'
 console.log(FoodList)
 let obj = [
       {component:Manage,
@@ -29,6 +30,9 @@ let obj = [
   }, {
     component:OrderList,
     address:"/admin/orderList"
+  },{
+    component:AdminList,
+    address:"/admin/adminList"
   }, {
     component:AddShop,
     address:"/admin/addshop"

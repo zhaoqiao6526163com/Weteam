@@ -7,7 +7,7 @@ class Visitor extends Component{
     this.state={
       option : {
         title : {
-          text: '????',
+          text: '用户分布',
           subtext: '',
           x:'center'
       },

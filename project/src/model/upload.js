@@ -44,16 +44,18 @@ class FoodImg extends React.Component {
     };
     componentDidUpdate() {
         let url = this.state.imageUrl
-        // if(this.state.loading === false){
-        //     // console.log(this.state.imageUrl)
-        //     let url = '/api/file/img'
-        //     this.$axios.post(url,{
-        //             hehe:this.state.imageUrl
-        //     })
-        //         .then((data)=>{
-        //             console.log(data)
-        //         })
-        // }
+        if(this.state.loading === false){
+            // console.log(this.state.imageUrl)
+            let formdata=new FormData()
+            formdata.append('img',this.state.imageUrl)
+            let url = '/api/file/img'
+            this.$axios.post(url,{
+                    hehe:formdata
+            })
+                .then((data)=>{
+                    console.log(data)
+                })
+        }
 
         this.props.changePath(url)
     }
