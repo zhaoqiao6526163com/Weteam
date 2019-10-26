@@ -70,8 +70,6 @@ class Router extends Component{
                       )
                     )     
                 }
-
-
               </Admin>
             )
           }}></Route>
