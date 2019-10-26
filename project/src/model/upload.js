@@ -47,10 +47,8 @@ class FoodImg extends React.Component {
         // if(this.state.loading === false){
         //     // console.log(this.state.imageUrl)
         //     let url = '/api/file/img'
-        //     this.$axios.get(url,{
-        //         params:{
+        //     this.$axios.post(url,{
         //             hehe:this.state.imageUrl
-        //         }
         //     })
         //         .then((data)=>{
         //             console.log(data)

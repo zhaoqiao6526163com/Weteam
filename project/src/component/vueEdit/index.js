@@ -1,5 +1,5 @@
 import React,{Component} from 'react'
-import '../style/edit.less'
+import './edit.less'
 import {Icon} from 'antd'
 class VueEdit extends Component{
   constructor(){

@@ -1,12 +1,8 @@
 import React,{Component} from 'react'
-<<<<<<< HEAD
-import {withRouter} from "react-router-dom"
-import {connect} from 'react-redux'
 import { Menu,Icon } from 'antd';
 import "./index.less"
-import { bindActionCreators } from 'redux'
-import actionCreator from '../store/actionCreator'
 import BScroll from "better-scroll";
+import {withRouter} from 'react-router-dom'
 const { SubMenu } = Menu
 
 let newData = [
@@ -84,7 +80,6 @@ class Nav extends Component{
       jump=(path)=> {
           this.props.history.push(path)
           console.log(this)
-          console.log(this.refs.qs)
       }
 
       renderList=(data)=>{
@@ -119,21 +114,6 @@ class Nav extends Component{
             </Menu>
         </div>
       );
-=======
-class Nav extends Component{
-  constructor(){
-    super()
-    this.state={
->>>>>>> a16c2ae43837b7df1b47919d0f9788c1dee4ca64
-      
-    }
-  }
-  render(){
-    return(
-      <div>
-        我是导航
-      </div>
-    )
   }
 }
-export default Nav
+export default withRouter(Nav)

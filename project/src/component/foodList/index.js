@@ -1,13 +1,7 @@
 import React,{Component} from 'react'
 import {Card,Icon,Popconfirm,Pagination } from 'antd'
-<<<<<<< HEAD:project/src/foodlist/index.js
-import '../style/index.less'
-import Model from '../model'
-=======
 import './index.less'
 import Model from '../../model'
->>>>>>> a16c2ae43837b7df1b47919d0f9788c1dee4ca64:project/src/component/foodList/index.js
-// import ActionCreator from '../store/actionCreator'
 
 class FoodList extends Component{
     constructor(){
